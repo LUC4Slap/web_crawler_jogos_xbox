@@ -21,7 +21,7 @@ class SendEmail(object):
         for item in self.conteudo:
             li = f"""
               <li>
-                Nome: {item['nome']}
+                Nome: <strong>{item['nome']}</strong>
                 Preço: {item['price']}
                 link: {item['link']}
               </li>

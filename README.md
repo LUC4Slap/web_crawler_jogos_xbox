@@ -17,5 +17,5 @@ esse comando fara uma busca com o selenium e trara o resultado por enquanto some
 - [x] Fazer o parser dos dados puros para um formato fora do html do site
 - [x] Fazer a classe para mandar o email
 - [x] Fazer uma função na classe de mandar email que converte os dados da lista em uma lista html
-- [ ] Fazer o scraping das demais paginas
+- [x] Fazer o scraping das demais paginas
 - [ ] Fazer a ação no github actions para executar este codigo uma vez no dia como mostra no video [aqui](https://www.youtube.com/watch?v=dfLKUwb-roA&ab_channel=Codifike).

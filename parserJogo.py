@@ -18,12 +18,17 @@ class ParserJogo(object):
 
         parser = []
         for promo in promos:
-            item = {
-                "nome": promo.find('h3', attrs={'class': 'c-subheading-4'}).text,
-                "price": promo.find('span', attrs={'class': 'textpricenew'}).text[3:],
-                "link": promo.find('a', attrs={'class': 'gameDivLink'})['href']
-            }
+            try:
+                item = {
+                    "nome": promo.find('h3', attrs={'class': 'c-subheading-4'}).text,
+                    "price": promo.find('span', attrs={'class': 'textpricenew'}).text[3:] or '',
+                    "link": promo.find('a', attrs={'class': 'gameDivLink'})['href']
+                }
 
-            parser.append(item)
+                parser.append(item)
+            except Exception as error:
+                print("Erro no parser")
+                print(error)
+                continue
 
         return parser
