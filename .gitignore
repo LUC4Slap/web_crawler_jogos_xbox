@@ -9,6 +9,7 @@ __pycache__/
 
 
 teste.*
+*.html
 
 # C extensions
 *.so

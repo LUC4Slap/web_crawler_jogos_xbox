@@ -53,6 +53,9 @@ class SendEmail(object):
             </body>
         </html>
         """
+        with open('pagina.html', 'w') as f:
+            f.write(html)
+
         return html
 
     def send_email(self):
