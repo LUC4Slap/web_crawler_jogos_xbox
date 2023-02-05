@@ -1,5 +1,7 @@
 # Web Crawler
 
+![bot](https://files.tecnoblog.net/wp-content/uploads/2018/07/bot-twitter.jpg)
+
 ## Feito para pesquisar os jogos que estão em promoção no site da xbox
 
 ### Para fazer funcionar pasta rodar o comando
@@ -9,6 +11,11 @@
 ```
 
 esse comando fara uma busca com o selenium e trara o resultado por enquanto somente da primeira pagina do site os 200 primeiros jogos que estão com alguma promoção ativa e depois enviara um e-mail com uma lista contendo o nome do jogo, preço e um link direto para a pagina do jogo no site.
+
+## Confirgura o e-mail
+
+Para conseguir fazer o uso do envio de email tem que criar uma conto no gmail, ativar a opção de autenticação de dois fatores e depois ir em senha de apps e gerar uma senha para que o python possa usar.
+![Autenticação de dois fatores](https://snov.io/knowledgebase/wp-content/uploads/2022/12/2022-11-29_14-02-19-1.png)
 
 ## TO DO
 
