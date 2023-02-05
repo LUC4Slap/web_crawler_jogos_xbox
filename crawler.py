@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 from parserJogo import ParserJogo
+from sendEmail import SendEmail
 
 navegador = webdriver.Chrome()
 
@@ -18,3 +19,5 @@ sleep(20)
 parse = ParserJogo(navegador.page_source)
 response = parse.parser_jogo()
 print(response)
+email = SendEmail(response)
+email.send_email()
