@@ -11,7 +11,9 @@ class ParserJogo(object):
         promos = []
 
         for item in busca:
-            promo = item.find('span', attrs={'class': 'c-badge'})
+            # promo = item.find('span', attrs={'class': 'c-badge'})
+            promo = item.find(
+                'span', attrs={'class': 'c-badge f-small f-highlight'})
             if promo == None:
                 continue
             promos.append(item)

@@ -17,17 +17,42 @@ class SendEmail(object):
         self.port = 587
 
     def transform_content_in_html(self):
-        html = "<ul>"
+        html = """
+        <!doctype html>
+        <html lang="pt-br">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Bootstrap demo</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        </head>
+        <body>
+            <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+        """
         for item in self.conteudo:
             li = f"""
-              <li>
-                Nome: <strong>{item['nome']}</strong>
-                Preço: {item['price']}
-                link: {item['link']}
-              </li>
+            <tr>
+                <td>{item['nome']}</td>
+                <td>R${item['price']}</td>
+                <td>{item['link']}</td>
+            </tr>
             """
             html += li
-        html += "</ul>"
+        html += """
+            </tbody>
+            </table>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+            </body>
+        </html>
+        """
         return html
 
     def send_email(self):
