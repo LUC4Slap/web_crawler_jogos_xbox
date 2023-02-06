@@ -10,7 +10,7 @@
   python3 crawler.py
 ```
 
-esse comando fara uma busca com o selenium e trara o resultado por enquanto somente da primeira pagina do site os 200 primeiros jogos que estão com alguma promoção ativa e depois enviara um e-mail com uma lista contendo o nome do jogo, preço e um link direto para a pagina do jogo no site.
+Esse comando fara uma busca com o selenium e trara o resultado de todas as paginas do site, aplicando a quantidade de 200 jogos por pagina e pegando em cada pagina os jogos que estão em promoção e no final de tudo é mandado um e-mail com um tabela que contem todos os jogos que estão com a tag promoção, nesse tabela é mandado o nome do jogo o preço da promoção e o link direto do jogo para não precisar procurar na listagem do site e ja ir direto para a pagina no jogo.
 
 ## Confirgura o e-mail
 
